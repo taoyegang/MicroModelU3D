@@ -172,6 +172,7 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\Scripts\ButtonBatten.cs" />
      <Compile Include="Assets\Scripts\CameraRotateDown.cs" />
      <Compile Include="Assets\Scripts\CameraRotateLeft.cs" />
      <Compile Include="Assets\Scripts\CameraRotateRight.cs" />
