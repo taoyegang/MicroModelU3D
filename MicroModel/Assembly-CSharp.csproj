@@ -177,7 +177,9 @@
      <Compile Include="Assets\Scripts\CameraRotateLeft.cs" />
      <Compile Include="Assets\Scripts\CameraRotateRight.cs" />
      <Compile Include="Assets\Scripts\CameraRotateUp.cs" />
+     <Compile Include="Assets\Scripts\InputController.cs" />
      <Compile Include="Assets\Scripts\Main.cs" />
+     <Compile Include="Assets\Scripts\RotateMgr.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.1.txt" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />

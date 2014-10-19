@@ -15,6 +15,6 @@ public class CameraRotateUp : MonoBehaviour {
 
 	void OnClick() {
 		Debug.Log("Rotate Up");
-		Camera.main.transform.RotateAround (Vector3.zero, Vector3.right, 5);
+		Camera.main.transform.RotateAround (Vector3.zero, camera.transform.right, 5);
 	}
 }
