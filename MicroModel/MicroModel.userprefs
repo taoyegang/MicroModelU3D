@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ButtonBatten.cs">
     <Files>
       <File FileName="../../TexasPoker/Assets/Plugins/UI Component/PopupBuyBetWindow.cs" Line="1" Column="1" />
       <File FileName="../../TexasPoker/Assets/Plugins/UI Component/PopupPlayerInfo.cs" Line="16" Column="17" />
-      <File FileName="Assets/Scripts/ButtonBatten.cs" Line="22" Column="58" />
+      <File FileName="Assets/Scripts/ButtonBatten.cs" Line="30" Column="64" />
+      <File FileName="Assets/Scripts/CameraRotateDown.cs" Line="16" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
