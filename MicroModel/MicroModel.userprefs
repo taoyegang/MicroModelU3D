@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InputController.cs">
     <Files>
@@ -7,6 +8,18 @@
       <File FileName="Assets/Scripts/CameraRotateLeft.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CameraRotateDown.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/InputController.cs" Line="60" Column="55" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CollisionController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\CameraController.cs" Line="47" Column="27" />
+      <File FileName="Assets\Scripts\CollisionController.cs" Line="18" Column="21" />
+      <File FileName="Assets\Scripts\ButtonBoard.cs" Line="21" Column="51" />
+      <File FileName="Assets\Scripts\ButtonBlock.cs" Line="6" Column="32" />
+      <File FileName="Assets\Scripts\ButtonPillar.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\ButtonWedge.cs" Line="13" Column="2" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="14" Column="27" />
+>>>>>>> 2bdc601b396a2c405c8a13825330cb4f08246b79
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
