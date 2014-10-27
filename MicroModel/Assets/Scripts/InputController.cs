@@ -13,11 +13,12 @@ public class InputController : MonoBehaviour {
 	};
 	private RotateDir dir;
 	private Transform rotateCamera;
+	private GameObject gongzi;
 	// Use this for initialization
 	void Start () {
 		dir = RotateDir.None;
 		rotateCamera = Camera.main.transform;
-
+		gongzi = GameObject.Find ("Anchor Point (GongZi)");
 	}
 	
 	// Update is called once per frame
@@ -50,19 +51,22 @@ public class InputController : MonoBehaviour {
 
 	void LateUpdate()
 	{
-		float moveDiff = 0.5f;
+		float moveDiff = 2.0f;
+
+		Vector3 centerPosition = gongzi.transform.position;
+
 		switch (dir) {
 		case RotateDir.Left:
-			rotateCamera.RotateAround(Vector3.zero,Vector3.up,-moveDiff);
+			rotateCamera.RotateAround(centerPosition,Vector3.up,-moveDiff);
 			break;
 		case RotateDir.Right:
-			rotateCamera.RotateAround(Vector3.zero,Vector3.up,moveDiff);
+			rotateCamera.RotateAround(centerPosition,Vector3.up,moveDiff);
 			break;
 		case RotateDir.Down:
-			rotateCamera.RotateAround(Vector3.zero,rotateCamera.right,moveDiff);
+			rotateCamera.RotateAround(centerPosition,rotateCamera.right,moveDiff);
 			break;
 		case RotateDir.Up:
-			rotateCamera.RotateAround(Vector3.zero,rotateCamera.right,-moveDiff);
+			rotateCamera.RotateAround(centerPosition,rotateCamera.right,-moveDiff);
 			break;
 		}
 		dir = RotateDir.None;
