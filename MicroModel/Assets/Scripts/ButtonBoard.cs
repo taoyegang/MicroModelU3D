@@ -4,16 +4,7 @@ using System.Collections;
 public class ButtonBoard : MonoBehaviour {
 
 	public GameObject spawnObject;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnClick() {
 		GameObject board = Object.Instantiate(spawnObject) as GameObject;
