@@ -5,16 +5,6 @@ public class ButtonBlock : MonoBehaviour {
 
 	public GameObject spawnObject;
 	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
 	void OnClick() {
 		GameObject block = Object.Instantiate(spawnObject) as GameObject;
 		block.layer = 8;

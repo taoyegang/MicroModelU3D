@@ -14,16 +14,17 @@ public class CollisionController : MonoBehaviour {
 	{
 		Debug.Log ("OnTriggerEnter =" + other.name);
 		Debug.Log ("name = " + name);
+
 		if (other.name == name) {
-			isActive = false;
-			// 为什么position不正确
-			//Debug.Log("other position " + other.transform.position);
-			//transform.position = other.transform.position;
-			
-			//Destroy(gameObject);
-			Color color = other.renderer.material.color;
-			other.renderer.material.color = new Color(color.r, color.g, color.b, 1.0f);
+		
+			Debug.Log ("match");
+			gameObject.renderer.material.color = Color.red;
+			other.gameObject.renderer.enabled = false;
 		}
+
+		Debug.Log ("match");
+		gameObject.renderer.material.color = Color.red;
+		other.gameObject.renderer.material.color = Color.yellow;
 	}
 	
 	
