@@ -8,6 +8,7 @@ public class ButtonBoard : MonoBehaviour {
 
 	void OnClick() {
 		GameObject board = Object.Instantiate(spawnObject) as GameObject;
+
 		board.layer = 8;
 		board.transform.position = GameObject.Find ("Base").transform.position;
 		board.transform.localScale = new Vector3 (1.5f, 3.0f, 1.5f);

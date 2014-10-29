@@ -1,9 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InputController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Primitive.cs">
     <Files>
-      <File FileName="Assets\Scripts\InputController.cs" Line="14" Column="24" />
-      <File FileName="Assets\Scripts\ButtonBoard.cs" Line="15" Column="2" />
+      <File FileName="Assets\Scripts\ButtonBoard.cs" Line="11" Column="3" />
+      <File FileName="Assets\Scripts\ButtonBlock.cs" Line="12" Column="73" />
+      <File FileName="Assets\Scripts\ButtonWedge.cs" Line="4" Column="43" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\ButtonPillar.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\Primitive.cs" Line="45" Column="51" />
+      <File FileName="Assets\Scripts\CameraController.cs" Line="64" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -54,10 +54,11 @@ public class CameraController : MonoBehaviour {
 			if (Physics.Raycast(ray, out hit, 100, 1 << LayerMask.NameToLayer("Touchable")))
 			{
 				GameObject hitObject = hit.transform.gameObject;
-				CollisionController collisionController = (CollisionController)hitObject.GetComponent(typeof(CollisionController));
-				bool isActive = collisionController.getIsActive();
+				Primitive primitive = (Primitive)hitObject.GetComponent(typeof(Primitive));
+				bool isActive = primitive.getIsActive();
 				Debug.Log("isActive = " + isActive);
 				if(isActive) {
+					Debug.Log("move");
 					isDraged = true;
 					translate = hit.transform;
 					// 把目标物体的世界空间转换到它自身的屏幕空间坐标
@@ -173,7 +174,7 @@ public class CameraController : MonoBehaviour {
 			// Otherwise change the field of view based on the change in distance between the touches.
 			Camera.main.fieldOfView += deltaMagDiff * perspectiveZoomSpeed;
 			// Clamp the field of view to make sure it's between 0 and 180.
-			Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 60.0f, 90.0f);
+			Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 60.0f, 120.0f);
 		}
 
 	}
