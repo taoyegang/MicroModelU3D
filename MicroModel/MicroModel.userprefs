@@ -1,8 +1,17 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Essential\Unity 3.x Game Development Essentials\1444EXP_Code\book_assets.unitypackage\Project\Assets\Scripts\Rocket.cs">
     <Files>
       <File FileName="..\..\Essential\Unity 3.x Game Development Essentials\1444EXP_Code\book_assets.unitypackage\Project\Assets\Scripts\Rocket.cs" Line="15" Column="2" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ToolPanel.cs">
+    <Files>
+      <File FileName="../../TexasPoker/Assets/Plugins/Scripts/Tweening/TweenPosition.cs" Line="1" Column="1" />
+      <File FileName="../../TexasPoker/Assets/Plugins/UI Component/PopupPlayerInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ToolPanel.cs" Line="47" Column="4" />
+>>>>>>> 91aa292bd4868c75ba8c6c58ad3b0db7582e3d41
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

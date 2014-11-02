@@ -179,7 +179,9 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CollisionController.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\PopupScrollSizePanel.cs" />
      <Compile Include="Assets\Scripts\Primitive.cs" />
+     <Compile Include="Assets\Scripts\ToolPanel.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.1.txt" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
