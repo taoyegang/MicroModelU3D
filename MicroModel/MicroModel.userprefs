@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Primitive.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Essential\Unity 3.x Game Development Essentials\1444EXP_Code\book_assets.unitypackage\Project\Assets\Scripts\Rocket.cs">
     <Files>
-      <File FileName="Assets\Scripts\ButtonBoard.cs" Line="11" Column="3" />
-      <File FileName="Assets\Scripts\ButtonBlock.cs" Line="12" Column="73" />
-      <File FileName="Assets\Scripts\ButtonWedge.cs" Line="4" Column="43" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="8" Column="2" />
-      <File FileName="Assets\Scripts\ButtonPillar.cs" Line="5" Column="2" />
-      <File FileName="Assets\Scripts\Primitive.cs" Line="45" Column="51" />
-      <File FileName="Assets\Scripts\CameraController.cs" Line="64" Column="32" />
+      <File FileName="..\..\Essential\Unity 3.x Game Development Essentials\1444EXP_Code\book_assets.unitypackage\Project\Assets\Scripts\Rocket.cs" Line="15" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
