@@ -24,7 +24,6 @@ public class CameraController : MonoBehaviour {
 	private Vector3 offset;
 
 
-
 	void Start () {
 		direction = RotateDirection.UNKNOWN;
 		cameraTransform = Camera.main.transform;
@@ -56,9 +55,7 @@ public class CameraController : MonoBehaviour {
 				GameObject hitObject = hit.transform.gameObject;
 				Primitive primitive = (Primitive)hitObject.GetComponent(typeof(Primitive));
 				bool isActive = primitive.getIsActive();
-				Debug.Log("isActive = " + isActive);
 				if(isActive) {
-					Debug.Log("move");
 					isDraged = true;
 					translate = hit.transform;
 					// 把目标物体的世界空间转换到它自身的屏幕空间坐标
@@ -83,7 +80,6 @@ public class CameraController : MonoBehaviour {
 				// 重新计算鼠标的屏幕坐标空间
 				mouseScreenSpace = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, targetScreenSpace.z);
 				translate.position = Camera.main.ScreenToWorldPoint (mouseScreenSpace) + offset;
-				//Debug.Log ("translate position is " + translate.position);
 			}
 		} else {
 			if (Input.touchCount == 1) {
@@ -178,4 +174,6 @@ public class CameraController : MonoBehaviour {
 		}
 
 	}
+
+
 }
