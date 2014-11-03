@@ -8,11 +8,23 @@ public class PopupScrollSizePanel : MonoBehaviour {
 	private UISlider _sliderY;
 	private UILabel _labelX;
 	private UILabel _labelY;
+	public int width = 0;
+	public int length = 0;
 
 	// Working variables
 	public int minSizeX = 10, maxSizeX = 200;
 	public int minSizeY = 10, maxSizeY = 200;
-	
+
+	public int getWidth()
+	{
+		return width;
+	}
+
+	public int getLength()
+	{
+		return length;
+	}
+
 	// Methods
 	void Awake () {
 		// Set variables
@@ -35,13 +47,13 @@ public class PopupScrollSizePanel : MonoBehaviour {
 	
 	public void OnSlider_X_Changed () {
 		float factor = _sliderX.sliderValue;
-		int sizeX = Mathf.RoundToInt (Mathf.Lerp (minSizeX, maxSizeX, factor));
-		_labelX.text = "x = " + sizeX.ToString();
+		width = Mathf.RoundToInt (Mathf.Lerp (minSizeX, maxSizeX, factor));
+		_labelX.text = "宽度 = " + width.ToString();
 	}
 
 	public void OnSlider_Y_Changed () {
 		float factor = _sliderY.sliderValue;
-		int sizeY = Mathf.RoundToInt (Mathf.Lerp (minSizeY, maxSizeY, factor));
-		_labelY.text = "y = " + sizeY.ToString();
+		length = Mathf.RoundToInt (Mathf.Lerp (minSizeY, maxSizeY, factor));
+		_labelY.text = "长度 = " + length.ToString();
 	}
 }
