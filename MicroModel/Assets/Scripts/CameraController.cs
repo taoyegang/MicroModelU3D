@@ -22,7 +22,11 @@ public class CameraController : MonoBehaviour {
 	private Vector3 targetScreenSpace;
 	private Vector3 mouseScreenSpace;
 	private Vector3 offset;
-
+	private UIButton _buttonRotateLeft;
+	private UIButton _buttonRotateRight;
+	private UIButton _buttonRotateUp;
+	private UIButton _buttonRotateDown;
+	float _freeTime;
 
 	void Start () {
 		direction = RotateDirection.UNKNOWN;
@@ -36,11 +40,17 @@ public class CameraController : MonoBehaviour {
 		mouseScreenSpace = Vector3.zero;
 		offset = Vector3.zero;
 		isDraged = false;
+		_buttonRotateLeft = transform.parent.Find ("UI Root/MainUIPanel/ButtonRotateLeft").GetComponent<UIButton> ();
+		_buttonRotateRight = transform.parent.Find ("UI Root/MainUIPanel/ButtonRotateRight").GetComponent<UIButton> ();
+		_buttonRotateUp = transform.parent.Find ("UI Root/MainUIPanel/ButtonRotateUp").GetComponent<UIButton> ();
+		_buttonRotateDown = transform.parent.Find ("UI Root/MainUIPanel/ButtonRotateDown").GetComponent<UIButton> ();
+		_freeTime = 0.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		HandleInput ();
+		ShowRotationButton ();
 	}
 
 	public void HandleInput()
@@ -73,6 +83,7 @@ public class CameraController : MonoBehaviour {
 		{
 			isDraged = false;
 			translate = null;
+			_freeTime = 3.0f;
 		}
 
 		if (isDraged) {
@@ -92,6 +103,34 @@ public class CameraController : MonoBehaviour {
 			if (Input.touchCount == 2) {
 				Zoom();
 			}
+		}
+	}
+
+	void ShowRotationButton()
+	{
+		if (translate != null) {
+			if(_buttonRotateLeft.transform.gameObject.activeSelf == false){
+				_buttonRotateLeft.transform.gameObject.SetActive(true);	
+				_buttonRotateRight.transform.gameObject.SetActive(true);	
+				_buttonRotateUp.transform.gameObject.SetActive(true);	
+				_buttonRotateDown.transform.gameObject.SetActive(true);	
+			}
+			Vector3 screenPos = Camera.main.WorldToScreenPoint(translate.position);
+			screenPos = screenPos + new Vector3(-Screen.width * 0.5f, -Screen.height * 0.5f, 0);
+			Debug.Log("screenPos is" + screenPos);
+			_buttonRotateLeft.transform.localPosition = new Vector3(screenPos.x - 100, screenPos.y, screenPos.z);
+			_buttonRotateRight.transform.localPosition = new Vector3(screenPos.x + 100, screenPos.y, screenPos.z);
+			_buttonRotateUp.transform.localPosition = new Vector3(screenPos.x, screenPos.y + 100, screenPos.z);
+			_buttonRotateDown.transform.localPosition = new Vector3(screenPos.x, screenPos.y - 100, screenPos.z);
+		}
+		else if(_buttonRotateLeft.transform.gameObject.activeSelf && _freeTime <= 0.0f)	{
+			_buttonRotateLeft.transform.gameObject.SetActive(false);	
+			_buttonRotateRight.transform.gameObject.SetActive(false);	
+			_buttonRotateUp.transform.gameObject.SetActive(false);	
+			_buttonRotateDown.transform.gameObject.SetActive(false);	
+		}
+		else if(_freeTime >= 0.0f) {
+			_freeTime -= Time.deltaTime;
 		}
 	}
 
