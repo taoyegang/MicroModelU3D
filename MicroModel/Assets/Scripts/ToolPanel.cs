@@ -101,30 +101,60 @@ public class ToolPanel : MonoBehaviour {
 				_selectedType = selectedType.board;
 				break;
 			}
-			/*case "ButtonWedge":{
+			case "ButtonWedge":{
 				//create xiezi
-				_selectedType = selectedType.selectedType_xiezi;
-				_popupSize.transform.gameObject.SetActive(_popupSize.transform.gameObject.activeSelf == false);
+				refreshPopupSize(selectedType.wedge);
 				break;
 			}
 			case "ButtonBlock":{
 				//create mukuai
-				_selectedType = selectedType.selectedType_mukuai;
-				_popupSize.transform.gameObject.SetActive(_popupSize.transform.gameObject.activeSelf == false);
+				refreshPopupSize(selectedType.block);
 				break;
 			}
 			case "ButtonBoard":{
 				//create muban
-				_selectedType = selectedType.selectedType_muban;
-				_popupSize.transform.gameObject.SetActive(_popupSize.transform.gameObject.activeSelf == false);
+				refreshPopupSize(selectedType.board);
 				break;
 			}
 			case "ButtonPillar":{
 				//mutiao
-				_selectedType = selectedType.selectedType_mutiao;
-				_popupSize.transform.gameObject.SetActive(_popupSize.transform.gameObject.activeSelf == false);
+				refreshPopupSize(selectedType.pillar);	
 				break;
-			}*/
+			}
+			case "Label_100":{
+				createObject(_selectedType, 100);
+				break;
+			}
+			case "Label_80":{
+				createObject(_selectedType, 80);
+				break;
+			}
+			case "Label_50":{
+				createObject(_selectedType, 50);
+				break;
+			}
+			case "Label_30":{
+				createObject(_selectedType, 30);
+				break;
+			}
 		}
+	}
+
+	void refreshPopupSize(selectedType type) {
+		if(_selectedType == type)
+		{
+			_popupSize.transform.gameObject.SetActive(_popupSize.transform.gameObject.activeSelf == false);
+		}
+		else
+		{
+			_popupSize.transform.gameObject.SetActive(true);
+			_selectedType = type;
+		}
+		
+		_popupSize.transform.position = UIButton.current.transform.position;
+	}
+
+	void createObject(selectedType type, float length) {
+		//在这里根据type和length写创建物体相关的
 	}
 }
