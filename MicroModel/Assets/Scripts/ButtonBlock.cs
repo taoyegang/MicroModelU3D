@@ -8,7 +8,7 @@ public class ButtonBlock : MonoBehaviour {
 	void OnClick() {
 		GameObject block = Object.Instantiate(spawnObject) as GameObject;
 		block.layer = 8;
-		block.transform.localScale = new Vector3 (1.5f, 1.5f, 0.12f);
+		block.transform.localScale = new Vector3 (2.0f, 2.0f, 2.0f);
 		block.transform.position = GameObject.Find ("Base").transform.position;
 
 	}
