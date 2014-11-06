@@ -164,7 +164,7 @@ public class ToolPanel : MonoBehaviour {
 		//在这里根据type和length写创建物体相关的
 		Debug.Log ("type =" + type);
 		Debug.Log ("length = " + length);
-		GameObject cube = null;
+		/*GameObject cube = null;
 		Primitive primitive = null;
 		if(type == selectedType.wedge) {
 			cube = Instantiate(Resources.Load("Wedge")) as GameObject;
@@ -186,7 +186,7 @@ public class ToolPanel : MonoBehaviour {
 			primitive.setWidth(width);
 			primitive.setHeight(length);
 			primitive.setHeight(height);
-			
-		}
+		}*/
+
 	}
 }
