@@ -12,8 +12,8 @@ public class PopupScrollSizePanel : MonoBehaviour {
 	public int length = 0;
 
 	// Working variables
-	public int minSizeX = 10, maxSizeX = 200;
-	public int minSizeY = 10, maxSizeY = 200;
+	public int minSizeX = 30, maxSizeX = 100;
+	public int minSizeY = 30, maxSizeY = 100;
 
 	public int getWidth()
 	{

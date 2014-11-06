@@ -137,6 +137,18 @@ public class ToolPanel : MonoBehaviour {
 				createObject(_selectedType, 30);
 				break;
 			}
+			case "ButtonRotateLeft": {
+				break;
+			}
+			case "ButtonRotateRight": {
+				break;
+			}
+			case "ButtonRotateUp": {
+				break;
+			}
+			case "ButtonRotateDown": {
+				break;
+			}
 		}
 	}
 
@@ -156,5 +168,7 @@ public class ToolPanel : MonoBehaviour {
 
 	void createObject(selectedType type, float length) {
 		//在这里根据type和length写创建物体相关的
+		Debug.Log ("type =" + type);
+		Debug.Log ("length = " + length);
 	}
 }

@@ -11,7 +11,7 @@ public class ButtonBoard : MonoBehaviour {
 
 		board.layer = 8;
 		board.transform.position = GameObject.Find ("Base").transform.position;
-		board.transform.localScale = new Vector3 (1.5f, 3.0f, 1.5f);
+		board.transform.localScale = new Vector3 (2.0f, 2.0f, 2.0f);
 		board.transform.Rotate (Vector3.right * 90);
 	}
 }

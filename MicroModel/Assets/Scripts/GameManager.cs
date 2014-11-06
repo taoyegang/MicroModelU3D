@@ -11,8 +11,9 @@ public class GameManager : MonoBehaviour {
 		Component[] renderers = target.GetComponentsInChildren (typeof(Renderer));
 		foreach (Renderer renderer in renderers) {
 			//Debug.Log("r = " + renderer.material.color.r);
+			//renderer.material.shader = Shader.Find("Transparent/Diffuse");
 			renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 0.5f);		
-			//renderer.material.color = Color.yellow;
+
 		}
 
 	}
