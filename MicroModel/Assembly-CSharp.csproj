@@ -172,10 +172,6 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
-     <Compile Include="Assets\Scripts\ButtonBlock.cs" />
-     <Compile Include="Assets\Scripts\ButtonBoard.cs" />
-     <Compile Include="Assets\Scripts\ButtonPillar.cs" />
-     <Compile Include="Assets\Scripts\ButtonWedge.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CollisionController.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />

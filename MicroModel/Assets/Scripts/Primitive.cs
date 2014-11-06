@@ -54,16 +54,19 @@ public class Primitive : MonoBehaviour {
 	{
 		GameObject target = other.gameObject;
 		Primitive primitive = (Primitive )target.GetComponent(typeof(Primitive));
-		if (primitive.getState () == PrimitiveState.STATIC && _state == PrimitiveState.DYNAMIC) {
-			if (primitive.getType () == _type && primitive.getLength () == _length && primitive.getWidth () == _width && primitive.getHeight () == _height) {
-				Debug.Log ("match");
-				_state = PrimitiveState.MATCH;
-
-				Color color = new Color (target.renderer.material.color.r, target.renderer.material.color.g, target.renderer.material.color.b, 1.0f);
-				target.renderer.material.color = color;
-				targetObject = target;
+		if (primitive != null) {
+			if (primitive.getState () == PrimitiveState.STATIC && _state == PrimitiveState.DYNAMIC) {
+				if (primitive.getType () == _type && primitive.getLength () == _length && primitive.getWidth () == _width && primitive.getHeight () == _height) {
+					Debug.Log ("match");
+					_state = PrimitiveState.MATCH;
+					
+					Color color = new Color (target.renderer.material.color.r, target.renderer.material.color.g, target.renderer.material.color.b, 1.0f);
+					target.renderer.material.color = color;
+					targetObject = target;
+				}
 			}
 		}
+
 	}
 
 	void RevertToNormal(PrimitiveType type)
@@ -85,14 +88,17 @@ public class Primitive : MonoBehaviour {
 	{
 		GameObject target = other.gameObject;
 		Primitive primitive = (Primitive )target.GetComponent(typeof(Primitive));
-		if (primitive.getState () == PrimitiveState.STATIC && _state == PrimitiveState.MATCH) {
-			if (primitive.getType () == _type && primitive.getLength () == _length && primitive.getWidth () == _width && primitive.getHeight () == _height) {
-				Debug.Log ("match");
-				_state = PrimitiveState.DYNAMIC;
-				Color color = new Color (target.renderer.material.color.r, target.renderer.material.color.g, target.renderer.material.color.b, 0.5f);
-				target.renderer.material.color = color;
-			}
+		if (primitive != null) {
+			if (primitive.getState () == PrimitiveState.STATIC && _state == PrimitiveState.MATCH) {
+				if (primitive.getType () == _type && primitive.getLength () == _length && primitive.getWidth () == _width && primitive.getHeight () == _height) {
+					Debug.Log ("match");
+					_state = PrimitiveState.DYNAMIC;
+					Color color = new Color (target.renderer.material.color.r, target.renderer.material.color.g, target.renderer.material.color.b, 0.5f);
+					target.renderer.material.color = color;
+				}
+			}	
 		}
+	
 	}
 	
 	public bool getIsActive()
