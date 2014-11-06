@@ -48,22 +48,14 @@ public class ToolPanel : MonoBehaviour {
 				int width = panel.getWidth();
 				int length = panel.getLength();
 				int height = 50;
-				Debug.Log("width = " + width);
-				Debug.Log("height = " + length);
 				GameObject cube = null;
 				Primitive primitive = null;
 				if(_selectedType == selectedType.wedge) {
-					
 					cube = Instantiate(Resources.Load("Wedge")) as GameObject;
 				}else if(_selectedType == selectedType.block) {
-					
 					cube = Instantiate(Resources.Load("Block")) as GameObject;
-
-					
 				}else if(_selectedType == selectedType.pillar) {
-					
 					cube = Instantiate(Resources.Load("Pillar")) as GameObject;
-					
 				}else if(_selectedType == selectedType.board) {
 					cube = Instantiate(Resources.Load("Board")) as GameObject;
 				}
@@ -78,8 +70,10 @@ public class ToolPanel : MonoBehaviour {
 					primitive.setWidth(width);
 					primitive.setHeight(length);
 					primitive.setHeight(height);
-					_popupScroll.transform.gameObject.SetActive(false);
+					
 				}
+
+				_popupScroll.transform.gameObject.SetActive(false);
 				
 				break;
 			}
@@ -170,5 +164,29 @@ public class ToolPanel : MonoBehaviour {
 		//在这里根据type和length写创建物体相关的
 		Debug.Log ("type =" + type);
 		Debug.Log ("length = " + length);
+		GameObject cube = null;
+		Primitive primitive = null;
+		if(type == selectedType.wedge) {
+			cube = Instantiate(Resources.Load("Wedge")) as GameObject;
+		}else if(type == selectedType.block) {
+			cube = Instantiate(Resources.Load("Block")) as GameObject;
+		}else if(type == selectedType.pillar) {
+			cube = Instantiate(Resources.Load("Pillar")) as GameObject;
+		}else if(type == selectedType.board) {
+			cube = Instantiate(Resources.Load("Board")) as GameObject;
+		}
+		
+		if(cube != null) {
+			cube.layer = 8;
+			cube.transform.position = GameObject.Find ("Base").transform.position;
+			primitive = (Primitive )cube.GetComponent(typeof(Primitive));
+			float scaleWidth = width / primitive.getWidth();
+			float scaleHeight = width / primitive.getHeight();
+			cube.transform.localScale = new Vector3 (scaleWidth, scaleHeight, 1.0f);
+			primitive.setWidth(width);
+			primitive.setHeight(length);
+			primitive.setHeight(height);
+			
+		}
 	}
 }
