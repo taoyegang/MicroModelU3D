@@ -45,42 +45,13 @@ public class ToolPanel : MonoBehaviour {
 				// 根据选择的类型create object
 				// 
 				PopupScrollSizePanel panel = (PopupScrollSizePanel )_popupScroll.GetComponent(typeof(PopupScrollSizePanel));
-				int width = panel.getWidth();
+				int height = panel.getHeight();
 				int length = panel.getLength();
-				int height = 50;
-				Debug.Log("width = " + width);
-				Debug.Log("height = " + length);
-				GameObject cube = null;
-				Primitive primitive = null;
-				if(_selectedType == selectedType.wedge) {
-					
-					cube = Instantiate(Resources.Load("Wedge")) as GameObject;
-				}else if(_selectedType == selectedType.block) {
-					
-					cube = Instantiate(Resources.Load("Block")) as GameObject;
-
-					
-				}else if(_selectedType == selectedType.pillar) {
-					
-					cube = Instantiate(Resources.Load("Pillar")) as GameObject;
-					
-				}else if(_selectedType == selectedType.board) {
-					cube = Instantiate(Resources.Load("Board")) as GameObject;
-				}
+				Debug.Log("height =" + height);
+				Debug.Log("length = " + length);
 				
-				if(cube != null) {
-					cube.layer = 8;
-					cube.transform.position = GameObject.Find ("Base").transform.position;
-					primitive = (Primitive )cube.GetComponent(typeof(Primitive));
-					float scaleWidth = width / primitive.getWidth();
-					float scaleHeight = width / primitive.getHeight();
-					cube.transform.localScale = new Vector3 (scaleWidth, scaleHeight, 1.0f);
-					primitive.setWidth(width);
-					primitive.setHeight(length);
-					primitive.setHeight(height);
-					_popupScroll.transform.gameObject.SetActive(false);
-				}
-				
+				createObject(_selectedType, length, height);
+				_popupScroll.transform.gameObject.SetActive(false);
 				break;
 			}
 			case "RedButtonPillar":{
@@ -122,19 +93,19 @@ public class ToolPanel : MonoBehaviour {
 				break;
 			}
 			case "Label_100":{
-				createObject(_selectedType, 100);
+				createObject(_selectedType, 100, 0);
 				break;
 			}
 			case "Label_80":{
-				createObject(_selectedType, 80);
+				createObject(_selectedType, 80, 0);
 				break;
 			}
 			case "Label_50":{
-				createObject(_selectedType, 50);
+				createObject(_selectedType, 50, 0);
 				break;
 			}
 			case "Label_30":{
-				createObject(_selectedType, 30);
+				createObject(_selectedType, 30, 0);
 				break;
 			}
 			case "ButtonRotateLeft": {
@@ -166,9 +137,56 @@ public class ToolPanel : MonoBehaviour {
 		_popupSize.transform.position = UIButton.current.transform.position;
 	}
 
-	void createObject(selectedType type, float length) {
-		//在这里根据type和length写创建物体相关的
-		Debug.Log ("type =" + type);
-		Debug.Log ("length = " + length);
+	void createObject(selectedType type, float length, float height) {
+		GameObject cube = null;
+		Primitive primitive = null;
+		Vector3 scale = new Vector3(1,1,1);
+		float factor = 0.0f;
+		if(type == selectedType.wedge) {
+			cube = Instantiate(Resources.Load("Wedge")) as GameObject;
+			primitive = (Primitive )cube.GetComponent(typeof(Primitive));
+			factor = length / primitive.getLength();
+			scale = new Vector3 (3.0f, 3.0f * factor, 3.0f);
+			primitive.setWidth(primitive.getWidth());
+			primitive.setHeight(primitive.getHeight());
+			primitive.setLength(length);
+		}else if(type == selectedType.block) {
+			cube = Instantiate(Resources.Load("Block")) as GameObject;
+			primitive = (Primitive )cube.GetComponent(typeof(Primitive));
+			factor = length / primitive.getLength();
+			scale = new Vector3 (3.0f, 3.0f, 0.24f) * factor;
+			primitive.setWidth(length);
+			primitive.setHeight(length);
+			primitive.setLength(length);
+		}else if(type == selectedType.pillar) {
+			cube = Instantiate(Resources.Load("Pillar")) as GameObject;
+			primitive = (Primitive )cube.GetComponent(typeof(Primitive));
+			factor = length / primitive.getHeight();
+			Debug.Log("factor = " + factor);
+			scale = new Vector3 (3.0f, 3.0f, 3.0f * factor);
+			primitive.setHeight(length);
+			primitive.setWidth(primitive.getWidth());
+			primitive.setLength(primitive.getLength());
+		}else if(type == selectedType.board) {
+			cube = Instantiate(Resources.Load("Board")) as GameObject;
+			primitive = (Primitive )cube.GetComponent(typeof(Primitive));
+			factor = length / primitive.getLength();
+			scale = new Vector3 (3.0f * factor, 6.0f * factor, 3.0f);
+			primitive.setHeight(length);
+			primitive.setWidth(primitive.getWidth());
+			primitive.setLength(length);
+			cube.transform.Rotate (Vector3.right * 90);
+			
+			
+		}
+		
+		if(cube != null) {
+			cube.layer = 8;
+			cube.transform.position = GameObject.Find ("Base").transform.position;
+			cube.transform.localScale = scale;
+		}
+
+		_popupSize.transform.gameObject.SetActive(false);
+
 	}
 }
