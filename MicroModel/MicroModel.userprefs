@@ -1,23 +1,11 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainUI.cs">
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Essential\Unity 3.x Game Development Essentials\1444EXP_Code\book_assets.unitypackage\Project\Assets\Scripts\Book\PowerCell.cs">
-    <Files>
-      <File FileName="..\..\Essential\Unity 3.x Game Development Essentials\1444EXP_Code\book_assets.unitypackage\Project\Assets\Scripts\Book\PowerCell.cs" Line="15" Column="2" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraController.cs">
->>>>>>> 865a29068e7266929126ab4452db340cafcd61e0
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PopupScrollSizePanel.cs">
     <Files>
       <File FileName="Assets/Scripts/MainUI.cs" Line="31" Column="19" />
       <File FileName="Assets/Scripts/ToolPanel.cs" Line="35" Column="4" />
-      <File FileName="Assets/Scripts/PopupScrollSizePanel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PopupScrollSizePanel.cs" Line="57" Column="46" />
       <File FileName="Assets/Scripts/CameraController.cs" Line="129" Column="31" />
->>>>>>> c776a35558d72774c6e4e81fb500327bedab6259
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
