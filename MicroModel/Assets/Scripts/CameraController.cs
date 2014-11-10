@@ -50,7 +50,7 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		HandleInput ();
-		//ShowRotationButton ();
+		ShowRotationButton ();
 	}
 
 	public void HandleInput()
@@ -132,6 +132,16 @@ public class CameraController : MonoBehaviour {
 		else if(_freeTime >= 0.0f) {
 			_freeTime -= Time.deltaTime;
 		}
+	}
+
+	public void HideRotationButton()
+	{
+		_freeTime = 0.0f;
+		_buttonRotateLeft.transform.gameObject.SetActive(false);	
+		_buttonRotateRight.transform.gameObject.SetActive(false);	
+		_buttonRotateUp.transform.gameObject.SetActive(false);	
+		_buttonRotateDown.transform.gameObject.SetActive(false);	
+		Debug.Log ("hideRotationButton");
 	}
 
 	void CheckTouchDir()

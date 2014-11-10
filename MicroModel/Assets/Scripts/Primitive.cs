@@ -26,6 +26,7 @@ public class Primitive : MonoBehaviour {
 	public float _length = 0.0f;
 	public bool _isActive = true;
 	private GameObject targetObject = null;
+	public CameraController _cameraController = null;
 	// Use this for initialization
 	void Start () {
 		
@@ -43,7 +44,7 @@ public class Primitive : MonoBehaviour {
 						primitive.setState(PrimitiveState.MATCH);
 						gameObject.renderer.enabled = false;
 					}
-					
+					_cameraController.HideRotationButton();
 				}
 			}
 
@@ -57,7 +58,7 @@ public class Primitive : MonoBehaviour {
 		if (primitive != null) {
 			if (primitive.getState () == PrimitiveState.STATIC && _state == PrimitiveState.DYNAMIC) {
 				if (primitive.getType () == _type && primitive.getLength () == _length && primitive.getWidth () == _width && primitive.getHeight () == _height) {
-					Debug.Log ("match");
+					Debug.Log ("enter match");
 					_state = PrimitiveState.MATCH;
 					
 					Color color = new Color (target.renderer.material.color.r, target.renderer.material.color.g, target.renderer.material.color.b, 1.0f);
@@ -91,7 +92,7 @@ public class Primitive : MonoBehaviour {
 		if (primitive != null) {
 			if (primitive.getState () == PrimitiveState.STATIC && _state == PrimitiveState.MATCH) {
 				if (primitive.getType () == _type && primitive.getLength () == _length && primitive.getWidth () == _width && primitive.getHeight () == _height) {
-					Debug.Log ("match");
+					Debug.Log ("exit match");
 					_state = PrimitiveState.DYNAMIC;
 					Color color = new Color (target.renderer.material.color.r, target.renderer.material.color.g, target.renderer.material.color.b, 0.5f);
 					target.renderer.material.color = color;

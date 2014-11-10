@@ -179,6 +179,12 @@ public class ToolPanel : MonoBehaviour {
 			
 			
 		}
+
+		if(primitive != null)
+		{
+			CameraController controller = (CameraController)Camera.main.GetComponent(typeof(CameraController));
+			primitive._cameraController = controller;
+		}
 		
 		if(cube != null) {
 			cube.layer = 8;

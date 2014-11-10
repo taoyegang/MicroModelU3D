@@ -1,23 +1,11 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PopupScrollSizePanel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraController.cs">
     <Files>
       <File FileName="Assets/Scripts/MainUI.cs" Line="31" Column="19" />
-      <File FileName="Assets/Scripts/ToolPanel.cs" Line="35" Column="4" />
-      <File FileName="Assets/Scripts/PopupScrollSizePanel.cs" Line="57" Column="46" />
-      <File FileName="Assets/Scripts/CameraController.cs" Line="129" Column="31" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ToolPanel.cs">
-    <Files>
-      <File FileName="Assets\Scripts\ToolPanel.cs" Line="146" Column="62" />
-      <File FileName="Assets\Scripts\MainUI.cs" Line="14" Column="3" />
-      <File FileName="Assets\Scripts\PopupScrollSizePanel.cs" Line="9" Column="26" />
-      <File FileName="Assets\Scripts\Primitive.cs" Line="55" Column="40" />
-      <File FileName="Assets\Scripts\CameraController.cs" Line="53" Column="27" />
-      <File FileName="Assets\Scripts\CollisionController.cs" Line="1" Column="1" />
->>>>>>> 0b3e0bde62f92b5956f0d1590ce1b72ebcdfa2ce
+      <File FileName="Assets/Scripts/ToolPanel.cs" Line="175" Column="1" />
+      <File FileName="Assets/Scripts/PopupScrollSizePanel.cs" Line="60" Column="1" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="109" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
