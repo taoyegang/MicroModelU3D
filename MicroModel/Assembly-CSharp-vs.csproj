@@ -178,6 +178,9 @@
      <Compile Include="Assets\Scripts\MainUI.cs" />
      <Compile Include="Assets\Scripts\PopupScrollSizePanel.cs" />
      <Compile Include="Assets\Scripts\Primitive.cs" />
+     <Compile Include="Assets\Scripts\SelectSupportPanel.cs" />
+     <Compile Include="Assets\Scripts\SelectTearPanel.cs" />
+     <Compile Include="Assets\Scripts\SelectTypePanel.cs" />
      <Compile Include="Assets\Scripts\ToolPanel.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.1.txt" />

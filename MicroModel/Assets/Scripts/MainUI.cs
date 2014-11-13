@@ -20,7 +20,7 @@ public class MainUI : MonoBehaviour {
 		{
 		case "ButtonPlay":
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel(2);
 			break;
 		}
 		case "ButtonAbout":
