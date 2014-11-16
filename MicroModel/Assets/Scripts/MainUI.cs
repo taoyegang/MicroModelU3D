@@ -46,6 +46,13 @@ public class MainUI : MonoBehaviour {
 		case "ButtonScan":
 		{
 			//扫一扫
+			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
+			if(jo != null) {
+				jo.Call("StartScanner","调用二维码扫描");
+			}else {
+				Debug.Log("jo is null");
+			}
 			break;
 		}
 		}
