@@ -33,6 +33,21 @@ public class MainUI : MonoBehaviour {
 			Application.Quit();
 			break;
 		}
+		case "ButtonUploading":
+		{
+			//灾情上传
+			break;
+		}
+		case "ButtonShow":
+		{
+			//案例展示
+			break;
+		}
+		case "ButtonScan":
+		{
+			//扫一扫
+			break;
+		}
 		}
 	}
 }
