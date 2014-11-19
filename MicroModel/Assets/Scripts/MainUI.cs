@@ -41,6 +41,13 @@ public class MainUI : MonoBehaviour {
 		case "ButtonShow":
 		{
 			//案例展示
+			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
+			if(jo != null) {
+				jo.Call("StartBrowser","www.baidu.com");
+			}else {
+				Debug.Log("jo is null");
+			}
 			break;
 		}
 		case "ButtonScan":
