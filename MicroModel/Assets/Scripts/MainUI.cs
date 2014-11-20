@@ -5,7 +5,7 @@ public class MainUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		Screen.SetResolution (1136, 640, true);
 	}
 	
 	// Update is called once per frame
