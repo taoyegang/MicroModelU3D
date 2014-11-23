@@ -36,6 +36,11 @@ public class MainUI : MonoBehaviour {
 		case "ButtonUploading":
 		{
 			//灾情上传
+			//案例展示
+			Debug.Log("uploading");
+			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
+			jo.Call("StartUploading", "hello uploading");
 			break;
 		}
 		case "ButtonShow":
@@ -44,7 +49,7 @@ public class MainUI : MonoBehaviour {
 			Debug.Log("example");
 			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 			AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
-			jo.Call("StartExample", "hello example");
+			jo.Call("StartExample", "hello show");
 			break;
 		}
 		case "ButtonScan":
