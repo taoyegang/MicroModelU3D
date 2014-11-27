@@ -120,6 +120,10 @@ public class ToolPanel : MonoBehaviour {
 			case "ButtonRotateDown": {
 				break;
 			}
+			case "ButtonBack": {
+				Application.LoadLevel(2);
+				break;
+			}
 		}
 	}
 
