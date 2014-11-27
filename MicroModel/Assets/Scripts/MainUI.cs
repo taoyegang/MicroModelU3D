@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+
+using UnityEngine;
 using System.Collections;
 
 public class MainUI : MonoBehaviour {
@@ -36,30 +37,30 @@ public class MainUI : MonoBehaviour {
 		case "ButtonUploading":
 		{
 			//灾情上传
+			//案例展示
+			Debug.Log("uploading");
+			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
+			jo.Call("StartUploading", "hello uploading");
 			break;
 		}
 		case "ButtonShow":
 		{
 			//案例展示
+			Debug.Log("example");
 			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 			AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
-			if(jo != null) {
-				jo.Call("StartBrowser","www.baidu.com");
-			}else {
-				Debug.Log("jo is null");
-			}
+			jo.Call("StartExample", "hello show");
 			break;
 		}
 		case "ButtonScan":
 		{
 			//扫一扫
+			Debug.Log("scan");
 			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 			AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
-			if(jo != null) {
-				jo.Call("StartScanner","调用二维码扫描");
-			}else {
-				Debug.Log("jo is null");
-			}
+			jo.Call("StartScanner", "hello scanner");
+
 			break;
 		}
 		}

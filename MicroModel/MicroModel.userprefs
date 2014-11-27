@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainUI.cs">
+    <Files>
+      <File FileName="..\..\..\Essential\Unity 3.x Game Development Essentials\1444EXP_Code\book_assets.unitypackage\Project\Assets\Scripts\Book\TargetCollision.cs" Line="19" Column="2" />
+      <File FileName="Assets\Scripts\MainUI.cs" Line="45" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+=======
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainUI.cs">
@@ -13,4 +27,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+>>>>>>> c40f5ab663fccdcc38c6fa1221aeb7bee58c1032
 </Properties>
