@@ -14,19 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="前进" />
-
-    <TextView
-        android:id="@+id/unit_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="19dp"
+        android:background="@drawable/listitem_bg"
+        android:drawableRight="@drawable/button_come"
         android:text="2008年5月汶川地震"
-        android:textColor="#FFFFFFFF"
-        android:textSize="32px" />
- 
+        android:textColor="#FFFEC8"
+        android:textSize="22dp" />
+
     </RelativeLayout>
 
 </LinearLayout>

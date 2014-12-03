@@ -1,33 +1,49 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
     tools:context="com.example.mmshow.WebviewActivity" >
 
-    <Button
-        android:id="@+id/button_back"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="返回" />
+        android:layout_alignParentRight="true"
+        android:background="@drawable/title_bg" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button_back"
-        android:layout_alignBottom="@+id/button_back"
-        android:layout_centerHorizontal="true"
-        android:text="案例展示" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="案例展示"
+            android:textColor="#FFFEC8"
+            android:textSize="26dp" />
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/button_back"
+            android:text=" Back"
+            android:textColor="#E5DD31"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/listView_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_back"
+        android:layout_below="@+id/relativeLayout1"
         android:layout_centerHorizontal="true" >
-
     </ListView>
 
-</RelativeLayout>
+</LinearLayout>

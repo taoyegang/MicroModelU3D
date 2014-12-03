@@ -2,28 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#888888" >
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/title_bg" >
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:textColor="#FFFFFF" 
-            android:textSize="28dp" 
-            android:text="案例上传" />
+            android:layout_centerVertical="true"
+            android:text="案例上传"
+            android:textColor="#FFFEC8"
+            android:textSize="26dp" />
 
         <Button
             android:id="@+id/button_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="返回" />
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/button_back"
+            android:text=" Back"
+            android:textColor="#E5DD31"
+            android:textSize="22dp" />
 
     </RelativeLayout>
 
@@ -31,19 +41,22 @@
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EEEEEE" >
+        android:background="#00000000" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="  时间:"
-                android:textColor="#000000"
+                android:drawableBottom="@drawable/line_long"
+                android:text="时间:"
+                android:textColor="#FFFFFF"
                 android:textSize="26dp" />
 
             <LinearLayout
@@ -54,44 +67,55 @@
                     android:id="@+id/button_datePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.81"
+                    android:layout_weight="0.54"
+                    android:background="#00000000"
                     android:text="2008年5月12日"
+                    android:drawableBottom="@drawable/line_short"
+                    android:textColor="#FFFF00"
                     android:textSize="18dp" />
 
                 <Button
                     android:id="@+id/button_timePicker"
-                    android:layout_width="wrap_content"
+                    android:layout_width="104dp"
                     android:layout_height="wrap_content"
-                    android:text="14:28" 
+                    android:background="#00000000"
+                    android:drawableBottom="@drawable/line_short"
+                    android:text="14:28"
+                    android:textColor="#FFFF00"
                     android:textSize="18dp" />
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="  地点:"
-                android:textColor="#000000"
-                android:textSize="26dp" />
+                android:text="地点:"
+                android:textColor="#FFFFFF"
+                android:textSize="26dp" 
+                android:drawableBottom="@drawable/line_long"
+                />
 
             <EditText
                 android:id="@+id/editText_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:text="中国四川省汶川县" >
-
-                <requestFocus />
-            </EditText>
+                android:text="中国四川省汶川县" 
+                android:textColor="#FFFF00"
+                android:background="#00000000"
+                android:drawableBottom="@drawable/line_long"
+                />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="  灾情说明:"
-                android:textColor="#000000"
-                android:textSize="26dp" />
+                android:text="灾情说明:"
+                android:textColor="#FFFFFF"
+                android:textSize="26dp" 
+                android:drawableBottom="@drawable/line_long"
+                />
 
             <EditText
                 android:id="@+id/editText_info"
@@ -99,11 +123,16 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textMultiLine"
-                android:text="这是一次非常严重的地震，等级达到了8.2级，伤亡严重。" />
+                android:text="这是一次非常严重的地震，等级达到了8.2级，伤亡严重。" 
+                android:background="#00000000"
+                android:drawableBottom="@drawable/line_long"
+                android:textColor="#FFFF00"
+                />
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
                 <LinearLayout
                     android:id="@+id/layer_picture"
@@ -112,6 +141,11 @@
                     android:orientation="vertical" >
                 </LinearLayout>
 
+                
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                
                 <Button
                     android:id="@+id/button_upload_picture"
                     android:layout_width="230dp"
@@ -119,9 +153,13 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:text="上传照片（0张）"
-                    android:textSize="20dp" />
+                    android:textSize="20dp" 
+                    android:background="@drawable/button_submit"
+                    />
 
             </RelativeLayout>
+                
+            </LinearLayout>
             
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -133,7 +171,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:textSize="20dp"
-                    android:text="提交" />
+                    android:text="提交"
+                    android:background="@drawable/button_submit"
+                     />
 
             </RelativeLayout>
 

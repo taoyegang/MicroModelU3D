@@ -36,6 +36,7 @@
         </activity>
         <activity android:name="com.foodmania.micromodel.WebviewActivity"></activity>
         <activity android:name="com.foodmania.micromodel.UpLoadCaseActivity"></activity>
+        <activity android:name="com.foodmania.micromodel.MultiPhotoSelectActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.VIBRATE" />
