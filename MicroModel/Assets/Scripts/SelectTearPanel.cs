@@ -28,22 +28,22 @@ public class SelectTearPanel : MonoBehaviour {
 		}
 		case "ButtonCircle":
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel(3);
 			break;
 		}
 		case "ButtonRectangle":
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel(3);
 			break;
 		}
 		case "ButtonTriangle":
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel(3);
 			break;
 		}
 		case "ButtonSafe":
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel(3);
 			break;
 		}
 		}
